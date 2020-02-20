@@ -1,0 +1,82 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "/dist",
+            "**/*.d.ts",
+            "**/*.js"
+        ]
+    },
+    "jsRules": {
+        "quotemark": [true, "single"],
+        "semicolon": [true, "never"],
+        "object-literal-sort-keys": false
+    },
+    "rules": {
+        "arrow-parens": false,
+        "quotemark": [true, "single"],
+        "semicolon": [true, "never"],
+        "forin": false,
+        "no-console": false,
+        "no-reference": false,
+        // https://stackoverflow.com/questions/34361379/arrow-function-vs-function-declaration-expressions-are-they-equivalent-exch
+        "only-arrow-functions": false,
+        // See "Clean Code" by R.Martin or https://softwareengineering.stackexchange.com/questions/117348/should-interface-names-begin-with-an-i-prefix
+        "interface-name": [
+            true,
+            "always-prefix"
+        ],
+        // Just a convention
+        "array-type": false,
+        "no-bitwise": false,
+        // Conflicted with WS default style guide
+        "space-before-function-paren": [
+            true,
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ],
+        // Think this is overkill
+        "object-literal-sort-keys": false,
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "private-instance-field",
+                    "private-static-field",
+                    "private-instance-method",
+                    "private-constructor",
+                    "public-static-field",
+                    "public-instance-field",
+                    "public-constructor",
+                    "public-instance-method",
+                    "protected-instance-method"
+                ]
+            }
+        ],
+        // Allow leading underscore for private variables
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "allow-pascal-case",
+            "check-format",
+            "allow-leading-underscore"
+        ],
+        "interface-over-type-literal": false,
+        "max-line-length": [true, 100],
+        "ban-types": false,
+        "no-empty-interface": false,
+        "max-classes-per-file": [true, 4],
+        "no-shadowed-variable": false,
+        "no-trailing-whitespace": false,
+        "prefer-for-of": false,
+        "one-variable-per-declaration": false
+    },
+    "rulesDirectory": []
+}
+
